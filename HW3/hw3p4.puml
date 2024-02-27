@@ -1,0 +1,26 @@
+@startuml
+'HW3 by Gabriel Bermudez
+
+object "<u> null</u>" as null{
+}
+
+object "<u> File:.htaccess</u>" as htaccess {
+}
+
+object "<u> File:.htrouter.php</u>" as htrouter {
+}
+
+object "<u> File:index.html</u>" as index {
+}
+
+map sourceFiles {
+.phalcon *-> null
+cache *-> null
+public *--> htaccess
+public *--> htrouter
+public *--> index
+Include Path *-> null
+Remote Files *--> null
+}
+
+@enduml

@@ -1,0 +1,39 @@
+@startuml
+'HW3 by Gabriel Bermudez
+
+class Course {
+private String courseName
+private Instructor instructor
+private Textbook textbook
+print()
+}
+
+class Instructor {
+private String firstName
+private String lastName
+private String officeNumber
+getFirstName()
+setFirstName()
+getLastName()
+setLastName()
+getOfficeNumber()
+setOfficeNumber()
+}
+
+class Textbook {
+private String title
+private String author
+private String publisher
+getTitle()
+setTitle()
+getAuthor()
+setAuthor()
+getPublisher()
+setPublisher()
+}
+
+
+Course o-- Instructor
+Course o-- Textbook
+
+@enduml

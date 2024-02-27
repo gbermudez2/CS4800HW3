@@ -1,0 +1,25 @@
+@startuml
+'HW3 by Gabriel Bermudez
+
+class Folder {
+private String name
+private List<File> files
+private List<Folder> subfolders
+getName()
+setName()
+addFile()
+addSubfolder()
+print()
+delete()
+}
+
+class File {
+private String name
+getName()
+print()
+}
+
+
+Folder *-- File
+
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+'HW3 by Gabriel Bermudez
+
+object "<u> Basic:Ship</u>" as ship1{
+yearBuilt: 2002
+}
+
+object "<u> Cruise:Cruise</u>" as ship2{
+yearBuilt: 2022
+maxOccupancy: 5000
+}
+
+object "<u> Cargo:Cargo</u>" as ship3{
+yearBuilt: 1990
+maxTonnage: 10000
+}
+
+map ShipType {
+ Ship *-> ship1
+ Cruise *--> ship2
+ Cargo *---> ship3
+}
+
+@enduml

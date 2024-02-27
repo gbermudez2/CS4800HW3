@@ -1,0 +1,32 @@
+@startuml
+'HW3 by Gabriel Bermudez
+
+class Ship {
+private String name
+private String yearBuilt
+getName()
+setName()
+getYear()
+setYear()
+print()
+}
+
+class CargoShip {
+private int tonnage
+getTonnage()
+setTonnage()
+print()
+}
+
+class CruiseShip {
+private int maxPassengers
+getMaxPassengers()
+setMaxPassengers()
+print()
+}
+
+
+Ship <|-- CargoShip
+Ship <|-- CruiseShip
+
+@enduml

@@ -1,0 +1,51 @@
+@startuml
+'HW3 by Gabriel Bermudez
+
+class Employee {
+private String firstName
+private String lastName
+private String ssn
+getFirstName()
+setFirstName()
+getLastName()
+setLastName()
+getSSN()
+setSSN()
+}
+
+class HourlyEmployee {
+private int wage
+private int hoursWorked
+getWage()
+setWage()
+getHoursWorked()
+setHoursWorked()
+}
+
+class SalariedEmployee {
+private int weeklySalary
+getWeeklySalary()
+setWeeklySalary()
+}
+
+class CommissionEmployee {
+private double commissionRate
+private int grossSales
+getCommissionRate()
+setCommissionRate()
+getGrossSales()
+setGrossSales()
+}
+
+class BaseEmployee {
+private int baseSalary
+getBaseSalary()
+setBaseSalary()
+}
+
+Employee <|-- HourlyEmployee
+Employee <|-- SalariedEmployee
+Employee <|-- CommissionEmployee
+Employee <|-- BaseEmployee
+
+@enduml

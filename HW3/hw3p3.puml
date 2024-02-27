@@ -1,0 +1,49 @@
+@startuml
+'HW3 by Gabriel Bermudez
+
+object "<u> Course:course1</u>" as course1{
+courseName:"Java Programming"
+instructor1
+textbook1
+}
+
+object "<u> Course:course2</u>" as course2{
+courseName:"Intro to Python"
+instructor2
+textbook2
+}
+
+object "<u> Instructor:instructor1</u>" as instructor1{
+courseName:"Intro to Python"
+instructor2
+textbook2
+}
+
+object "<u> Instructor:instructor2</u>" as instructor2{
+courseName:"Intro to Python"
+instructor2
+textbook2
+}
+
+object "<u> Textbook:textbook1</u>" as textbook1{
+courseName:"Intro to Python"
+instructor2
+textbook2
+}
+
+object "<u> Textbook:textbook2</u>" as textbook2{
+courseName:"Intro to Python"
+instructor2
+textbook2
+}
+
+map Courses {
+ course1 *-> course1
+ course2 *--> course2
+ course1 *-> instructor1
+ course2 *--> instructor2
+ course1 *-> textbook1
+ course2 *--> textbook2
+}
+
+@enduml
